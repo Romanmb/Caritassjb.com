@@ -1,0 +1,37 @@
+name: Inheritance
+description: Section inheritance tab
+type: section.inheritance
+
+form:
+  fields:
+    _info:
+      type: separator.note
+      class: alert alert-info blocksize-note
+      content: 'Inheritance makes the Section identical to that of the inherited outline.'
+
+    mode:
+      type: input.radios
+      label: Mode
+      description: Whether to clone or inherit the section properties
+      default: inherit
+      options:
+        clone: Clone
+        inherit: Inherit
+
+    outline:
+      type: gantry.outlines
+      label: Outline
+      description: Outline to inherit from.
+      selectize:
+        allowEmptyOption: true
+      options:
+        '': No Inheritance
+
+    include:
+      type: input.multicheckbox
+      label: Replace
+      description: Which parts of the Section to inherit?
+      options:
+        attributes: Section Attributes
+        block: Block Attributes
+        children: Particles within Section

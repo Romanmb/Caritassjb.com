@@ -1,0 +1,380 @@
+@import "variables.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+@import "variables.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+@import "mixins/elements.less";
+
+@menuTextHover: @linkcolor;
+@menuInsetShadow: none;
+@menuFullShadow: none;
+
+@menuTextColor:#303030;
+@menuActiveBack: none;
+@menuActiveShadow: none;
+@borderBottomColor: @linkcolor;
+@menuItemRadius: 0px;
+@menuTextShadow:#F3F3F3;
+@menuDropBack2:#FFFFFF;
+@menuMobileColor: #D6D6D6;
+
+@sprocket-item-background: transparent;
+@sprocket-item-text-align: center;
+@sprocket-text-color: @tk_mainbodytextcolor;
+@sprocket-headlines-linkcolor: @linkcolor;
+@RokSprocketStripsLinkcolor: #FFFFFF;
+
+.sprocket-mosaic{
+    color:  @sprocket-text-color !important;
+    .sprocket-mosaic-header{
+        //Header code to go here
+        .sprocket-mosaic-order{
+            li{
+                -webkit-border-radius: 0px;
+                -moz-border-radius:0px;
+                border-radius: 0px;
+                border:1px solid transparent;
+                background: transparent;
+                color: @sprocket-text-color;
+		transition: all 0.5s;
+                &:hover,&.active{
+                    border:1px solid @sprocket-text-color;
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+    .sprocket-mosaic-container{
+        .sprocket-mosaic-item{
+                border-radius: 0;
+                background: @sprocket-item-background;
+                border:  none;
+                .sprocket-padding{
+                    padding:0;
+                }
+                
+     .sprocket-mosaic-image-container{
+	height:250px;
+	border:solid 10px #FFFFFF;
+	box-shadow: 0 1px 2px #999;
+        img{
+            &.sprocket-mosaic-image{
+                transition: all 0.8s ease-in-out 0s;
+                height:100%;
+                
+            }
+        }
+        &:hover{
+            img{
+            &.sprocket-mosaic-image{
+                
+                    transform: scale(1.5) rotate(5deg);
+                    -webkit-transform: scale(1.5) rotate(5deg);
+                }
+        }
+        .sprocket-mosaic-hovercontent{
+                        color: #FFFFFF;
+	                text-shadow: 1px 1px #000000;
+	                right:15px !important;
+                        font-weight: normal;
+                        left:0;
+                        width:  auto;
+                               }
+                .sprocket-mosaic-hover{
+                        background-color:rgba(0,0,0, 0.5);
+	                height:100%;
+                        width:100%;
+                        }
+            
+        }
+        
+                       }
+                a{
+                    &.sprocket-readmore{
+                        display:  none;
+                    }
+                }
+		.sprocket-mosaic-head{
+		    h2{
+			&.sprocket-mosaic-title{
+			    font-weight: normal;
+			}
+		    }
+		}
+            }
+    }
+    .sprocket-mosaic-loadmore{
+        border:  none;
+        background: @sprocket-item-background;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius:0px;
+        .loadmore-more{
+           
+        }
+    }
+    
+}
+// SPROCKET LIST  //
+
+.sprocket-lists{
+    ul.sprocket-lists-container{
+        li{
+	    color:@tk_mainbodytextcolor;
+            .sprocket-lists-title{
+                border-radius: 0;
+		
+                border: 1px solid transparent;
+                background: transparent;
+                .indicator{
+                    background:  @tk_body_backgroundcolor;
+		    opacity: 1;
+		    .border-radius(0);
+                }
+                
+            }
+            h4{
+            &.sprocket-lists-title {
+            color:@tk_mainbodytextcolor;
+	    font-weight: normal;
+            }
+            }
+        }
+    }
+}
+
+// ROKSPROCKET TABS //////////////////////////
+
+.sprocket-tabs{
+    .sprocket-tabs-nav{
+        border-bottom: 1px solid transparent;
+	
+        li{
+            &.active{
+                .sprocket-tabs-inner{
+                    background-color:  transparent;
+                    border-bottom: 1px solid #ddd;
+                    border-radius: 0;
+                    .sprocket-tabs-text{
+                        color:  @linkcolor;
+                    }
+                }
+            }
+        }
+    }
+    .sprocket-tabs-panels{
+        .sprocket-tabs-panel{
+            a{
+		    &.readon{
+			border-color: transparent;
+			background-color: transparent;
+			background-image: none;
+			text-shadow: -1px -1px 0px transparent;
+			color:  @linkcolor;
+			border: none;
+			border-radius: 0px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		    }
+		}
+        }
+    }
+}
+
+// ROKSPROCKET STRIPS ////////////////////////////////
+
+.sprocket-strips{
+    .sprocket-strips-container{
+        >li{
+             .sprocket-strips-item{
+                background-position: center;
+                position: relative;
+                overflow: hidden;
+                height:450px;
+                
+                -webkit-box-shadow: none;
+                -mox-box-shadow: none;
+                box-shadow:  none;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing:  border-box;
+                -webkit-transition: all 0.3s ease-in;
+                -moz-transition: all 0.3s ease-in;
+                -o-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+                -webkit-transform: translateZ(0);
+                .sprocket-strips-content{
+                    visibility: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    padding:  0 10px 30px;
+                    text-align: center;
+                    h4{
+                        &.sprocket-strips-title{
+                            a{
+                                color: @RokSprocketStripsLinkcolor;
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                &:hover{
+                    
+                    .sprocket-strips-content{
+                        visibility: visible;
+                        h4{ 
+                            a{
+                                
+                                &:hover{
+                                    color: #ffffff;
+                                    
+                                }
+                            }
+                        }
+                        .readon{
+			border-color: transparent;
+			background-color: transparent;
+			background-image: none;
+			text-shadow: -1px -1px 0px @tk_mainbottomshadowcolor;
+			color:  @RokSprocketStripsLinkcolor;
+			border: none;
+			border-radius: 0px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+                       
+		    }
+                        
+                    }
+                                    
+                }
+                
+                
+                
+                
+            }
+        }
+        .sprocket-strips-item{
+            background-size: cover;
+            border-radius: 0px;
+            
+        }
+    }
+    .sprocket-strips-nav{
+        .sprocket-strips-pagination{
+            li{
+                background: @linkcolor;
+                &.active{
+                    background: @linkcolor;
+                }
+            }
+            
+        }
+        .sprocket-strips-arrows{
+            .arrow{
+                background:  transparent;
+                color:@linkcolor;
+            }
+        }
+    }
+}
+.sprocket-strips .sprocket-strips-container >li .sprocket-strips-item:before{
+   
+    content: "";
+    position: absolute;
+    bottom:-10px;
+    right:0;
+    width:0;
+    height:0;
+    border-style: solid;
+    border-width:  0 0 0px 0px;
+    border-color: transparent transparent #000000 #000000;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    -webkit-transform:translateZ(0);
+}
+.sprocket-strips .sprocket-strips-container >li .sprocket-strips-item:hover:before{
+    border-width: 0 0 500px 500px;
+    border-color:  transparent transparent #000000 #000000;
+    opacity: 0.7;
+}
+
+///////////////// RokSprocket Headlines ///////////////////////////////
+
+.sprocket-headlines{
+    border:1px solid transparent !important;
+    background: transparent !important;
+    
+    .sprocket-headlines-container{
+        .sprocket-headlines-list{
+            .sprocket-headlines-item{
+                font-size: 14px;
+                line-height: 1.7em;
+                img{
+                    width:50%;
+                }
+            }
+            
+        }
+        .sprocket-headlines-navigation{
+            .arrow{
+                &.next{
+                background: @sprocket-headlines-linkcolor;
+                border-radius: 0px;
+                height: auto;
+                padding: 100% 10%;
+                }
+                &.prev{
+                background: @sprocket-headlines-linkcolor;
+                border-radius: 0px;
+                height: auto;
+                padding: 100% 10%;
+                }
+            }
+            
+            
+        }
+    }
+}
+
+img.sprocket-tab-icon{
+    width:50%;
+    border:2px solid black;
+}
+
+
+
+
+/////////////////
+
+
+
+ #rt-mainbottom{
+	
+	.rt-block{
+	   
+	    a{
+		    &.sprocket-readmore{
+			border-color: transparent;
+			background-color: transparent;
+			background-image: none;
+			text-shadow: -1px -1px 0px @rttranisitionshadowcolor;
+			color:  @sprocket-text-color;
+			border: none;
+			border-radius: 0px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		    }
+		}
+	}
+	
+    }

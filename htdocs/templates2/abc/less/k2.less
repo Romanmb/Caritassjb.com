@@ -1,0 +1,201 @@
+@import "variables.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+@import "variables.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+@import "mixins/elements.less";
+@rttranisitionBOXbackgroundcolor: transparent;
+@textcolor: @bodytextcolor;
+
+#k2Container{
+    .itemBackToTop{
+        display:none;
+    }
+    .itemList{
+        .itemContainer{
+            padding: 0 20px 15px 0;
+        }
+        .catItemHeader{
+            
+            h3{
+                &.catItemTitle{
+                   
+                }
+            }
+        }
+        
+        .catItemBody{
+        img{
+            position: relative;
+            float: left;
+            max-width: 50%;
+            margin:  0 20px 10px 0;
+            border:solid 10px #FFFFFF;
+            box-shadow: 1px 1px 5px #999;
+        }
+        
+       
+    }
+        
+    }
+    .itemHeader{
+        h2{
+                &.itemTitle{
+                    
+                }
+            }
+    }
+    .itemToolbar{
+        color: @textcolor;
+    }
+    .itemRatingBlock{
+        color: @textcolor;
+        span{
+            color: @textcolor;
+        }
+        
+    }
+    .itemBody{
+         .itemFullText{
+            img{
+                position: relative;
+                float: left;
+                max-width: 50%;
+                margin:  0 20px 10px 0;
+                border:solid 10px #FFFFFF;
+                box-shadow: 1px 1px 5px #999;
+            }
+        }
+        .itemIntroText{
+            font-weight: normal;
+            font-size: 14px;
+            img{
+                border:solid 10px #FFFFFF;
+                box-shadow: 1px 1px 5px #999;
+            }
+        }
+        .itemContentFooter{
+            color:@textcolor;
+        }
+    }
+    .itemAuthorBlock{
+        font-weight: normal;
+        .itemAuthorDetails{
+            h3{
+                &.itemAuthorName{
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    .itemAuthorLatest{
+        h3{
+            font-weight: normal;
+        }
+    }
+    .itemRelated{
+        h3{
+            font-weight: normal;
+        }
+    }
+    .itemComments{
+        .itemCommentsForm{
+            h3{
+                font-weight: normal;
+                text-transform: uppercase;
+            }
+            form{
+                textarea{
+                    width:100%;
+                    border: 1px solid transparent !important;
+                    background:  @rttranisitionBOXbackgroundcolor !important;
+                }
+                input{
+                    &#submitCommentButton{
+                        background:  transparent;
+                        border:1px solid transparent;
+                        box-shadow: none !important;
+                        text-shadow:  -1px -1px transparent;
+                        color:  @linkcolor;
+                        
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    input{
+        &.inputbox{
+            width:100%;
+            border:1px solid transparent !important;
+            background:  @rttranisitionBOXbackgroundcolor !important;
+        }
+    }
+    .tagItemList{
+        .tagItemView{
+            img{
+               position: relative;
+               float: left;
+               max-width: 50%;
+               margin:  0 20px 10px 0;
+               border:solid 10px #FFFFFF;
+               box-shadow: 1px 1px 5px #999;
+            }
+            
+        }
+    }
+    
+    
+    
+}
+
+
+///// K2 user account page
+
+#k2Container input.inputbox{
+    border:solid 1px #dadada !important;
+    .rounded(0px);
+}
+.k2AccountPage{
+    table{
+        &.admintable{
+            width: 100%;
+            .k2ProfileHeading{
+                text-align: center;
+                font-weight: normal;
+                font-size: 28px;
+                line-height: 30px;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                text-rendering: optimizelegibility;
+            }
+            
+                       
+        }
+    }
+    
+}
+ .k2UserBlock{
+    .k2UserBlockDetails{
+        
+    }
+    .k2UserBlockActions{
+        li{
+            a{
+                color: #FFFFFF;
+            }
+        }
+    }
+    form{
+        .button, .readon, .readmore, button.validate, #member-profile a, #member-registration a, .formelm-buttons button, .btn-primary{
+            background-image: none;
+            border: solid 1px #FFFFFF;
+            .rounded(0px);
+        }
+    }
+ }
+ 
+ 
+ 

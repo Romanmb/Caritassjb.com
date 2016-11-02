@@ -1,0 +1,124 @@
+// to style bowthemes login / register module
+
+@import "variables.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+@import "mixins/elements.less";
+//////// VARIABLES ///////////
+// override theses values and it will affect colors and styles //
+
+@bt-btnbgcolor: @linkcolor;
+
+
+
+//////////////////////////  TB LOGIN/REGISTER   ///////////////////////
+
+#btl{
+    .btl-panel{
+        >span{
+            &.btl-modal{
+                .border-radius(0px);
+                background-color:  @bt-btnbgcolor !important;
+                box-shadow: none;
+                border: 1px solid #FFFFFF !important;
+            }
+        }
+        .btl-dropdown{
+            .border-radius(0px);
+            background-color:  @bt-btnbgcolor !important;
+        }
+    }
+}
+.btl-content-block{
+    .border-radius(0px) !important;
+    .btl-buttonsubmit{
+                button{
+                    &.btl-buttonsubmit{
+                        .border-radius(0px);
+                        background-color:  @bt-btnbgcolor !important;
+                        .box-shadow(0 0 0 0 );
+                        text-shadow: none;
+                    }
+                }
+            }
+}
+
+
+#simplemodal-container{
+    z-index:10002 !important;
+    .btl-content-block{
+        .border-radius(0px);
+        .btl-formlogin{
+            .btl-field{
+                .btl-input{
+                    input{
+                        &#btl-input-username{
+                            .border-radius(0px);
+                        }
+                        &#btl-input-password{
+                            .border-radius(0px);
+                        }
+                    }
+                }
+            }
+            .btl-buttonsubmit{
+                input{
+                    &.btl-buttonsubmit{
+                        .border-radius(0px);
+                        background-color:  @bt-btnbgcolor !important;
+                        .box-shadow(0 0 0 0 );
+                    }
+                }
+            }
+        }
+        .btl-formregistration{
+            .btl-field{
+                .btl-input{
+                    input{
+                        &#btl-input-name{
+                            .border-radius(0px);
+                        }
+                        &#btl-input-username1{
+                            .border-radius(0px);
+                        }
+                        &#btl-input-password1{
+                            .border-radius(0px);
+                        }
+                        &#btl-input-password2{
+                            .border-radius(0px);
+                        }
+                        &#btl-input-email1{
+                            .border-radius(0px);
+                        }
+                        &#btl-input-email2{
+                            .border-radius(0px);
+                        }
+                    }
+                }
+                
+            }
+            .btl-buttonsubmit{
+                button{
+                    &.btl-buttonsubmit{
+                        .border-radius(0px);
+                        background-color:  @bt-btnbgcolor !important;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+   #simplemodal-container{
+    width: 100% !important;
+    
+    #btl-content-registration{
+	width:  100% !important;
+	min-width:  250px !important;
+       }
+    
+    
+    }
+    
+}
