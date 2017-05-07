@@ -2,7 +2,7 @@
 class JConfig {
 	public $MetaAuthor = '1';
 	public $MetaDesc = 'Cáritas San Juan Bautista';
-	public $MetaKeys = 'Cáritas, Caritas Parroquial, Servicio, Amor, misericordia, Ayuda, Apoyo, Caridad';
+	public $MetaKeys = 'Cáritas, Caritas Parroquial, Cáritas en México, Servicio, Amor, misericordia, Ayuda, Apoyo, Caridad, Que es caridad, Despensas, quiero ayudar, como puedo ayudar, quiero hacer un donativo, institución para hacer un donativo, como puedo ayudar, ayuda san juan del rio queretaro, ayuda queretaro, apoyo san juan del rio, programas caridad san juan del rio, donativos san juan del rio, caridad san juan del rio, caridad queretaro, quiero servir, quiero ayudar';
 	public $MetaRights = '';
 	public $MetaTitle = '1';
 	public $MetaVersion = '1';
